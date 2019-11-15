@@ -1,0 +1,28 @@
+<button (click)="addRecord()" type="button" class="btn btn-primary">Add</button>
+
+<div style="background-color: antiquewhite" 
+class="table-responsive">
+  <table class="table table-hover">
+    <thead> 
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Adress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of emps">
+        <td>{{emp.no}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.address}}</td>
+        <td>
+          <button routerLink="/edit/{{emp.no}}" type="button" style="background-color:green" class="btn btn-primary">Edit</button>
+        </td>
+        <td>
+          <button type="button" (click)="delete(emp.no)" style="background-color: red" class="btn btn-primary">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

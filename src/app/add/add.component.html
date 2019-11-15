@@ -1,0 +1,23 @@
+<a routerLink="/home">Go to Home</a>
+<br>
+<form #myForm="ngForm" (ngSubmit)="addRecord(myForm)"
+role="form">
+  <legend>Add new record</legend>
+
+  <div class="form-group">
+    <label for="No">No</label>
+    <input ngModel type="text" class="form-control" id="no" name="no">
+  </div>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input ngModel type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="Address">Addrees</label>
+    <input ngModel type="text" class="form-control" id="Address" name="address">
+  </div>
+  
+
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+

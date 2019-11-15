@@ -1,0 +1,20 @@
+<a routerLink="/home">Go to Home</a>
+<br>
+<form style="background-color: skyblue" 
+role="form">
+  <legend>Edit Employee Record</legend>
+
+  <div class="form-group">
+    <label for="No">No</label>
+    <input [(ngModel)]="emp.no" type="text" disabled="disabled" class="form-control" id="No" name="no">
+  </div>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input [(ngModel)]="emp.name" type="text" class="form-control" id="Name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="Address">Address</label>
+    <input [(ngModel)]="emp.address" type="text" class="form-control" id="Address" name="address">
+  </div>
+  <button type ="submit" (click)="update()" class="btn btn-primary">Update</button>
+</form>
